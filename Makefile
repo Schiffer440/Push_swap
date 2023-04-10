@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adugain <adugain@student.42.fr>            +#+  +:+       +#+         #
+#    By: adugain <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/27 09:59:59 by adugain           #+#    #+#              #
-#    Updated: 2023/03/28 11:49:40 by adugain          ###   ########.fr        #
+#    Updated: 2023/04/08 14:21:08 by adugain          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ PROG = push_swap
 
 LIBFT = libft/libft.a
 
-SRC = big_sort.c check_val_utils.c check_val.c cost.c \
-	format.c ft_printf.c init.c main.c move.c pile.c \
+SRC =	valid_input_utils.c is_valid_input.c cost.c \
+	init.c main.c move_pile.c pile.c big_sort.c \
 	pos.c push.c rev_rotate.c rotate.c small_sort.c swap.c utils.c
 
 CFLAGS	= -Wextra -Wall -Werror

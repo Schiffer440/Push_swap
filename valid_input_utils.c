@@ -1,39 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   check_val_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adugain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 11:06:49 by adugain           #+#    #+#             */
-/*   Updated: 2023/02/21 10:34:01 by adugain          ###   ########.fr       */
+/*   Created: 2023/02/20 10:13:17 by adugain           #+#    #+#             */
+/*   Updated: 2023/04/07 15:25:57 by adugain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_printf(const char *str, ...)
+int	is_sign(char c)
 {
-	int		i;
-	int		len;
-	va_list	args;
+	return (c == '+' || c == '-');
+}
+
+int	strnb_comp(char *s1, char *s2)
+{
+	int	i;
+	int	j;
 
 	i = 0;
-	len = 0;
-	if (!str)
-		return (0);
-	va_start(args, str);
-	while (str[i])
+	j = i;
+	if (s1[i] == '+')
 	{
-		if (str[i] == '%')
-		{
-			len += format(str[i + 1], args);
-			i++;
-		}
-		else
-			len += write(1, &str[i], 1);
-		i++;
+		if (s2[j] != '+')
+			j++;
 	}
-	va_end(args);
-	return (len);
+	else
+	{
+		if (s2[i] == '+')
+			j++;
+	}
+	while (s1[i] && s2[j] && s1[i] == s2[j])
+	{
+		i++;
+		j++;
+	}
+	return (s1[i] - s2[j]);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_val.c                                        :+:      :+:    :+:   */
+/*   is_valid_input.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adugain <adugain@student.42.fr>            +#+  +:+       +#+        */
+/*   By: adugain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 09:54:39 by adugain           #+#    #+#             */
-/*   Updated: 2023/03/28 15:31:35 by adugain          ###   ########.fr       */
+/*   Updated: 2023/04/07 15:47:39 by adugain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static int	number_check(char *av)
 	i = 0;
 	if (is_sign(av[i]) && av[i + 1] != '\0')
 		i++;
-	while (av[i] && is_digit(av[i]))
+	while (av[i] && ft_isdigit(av[i]))
 		i++;
-	if (av[i] != '\0' && !is_digit(av[i]))
+	if (av[i] != '\0' && !ft_isdigit(av[i]))
 		return (0);
 	return (1);
 }
@@ -62,15 +62,6 @@ static int	check_zero(char *av)
 	return (1);
 }
 
-static int	is_valid_int(char *av)
-{
-	long int	a = (2 << 32) - 1;
-	ft_printf("bit = %ld\n", a);
-	if (atol(av) < INT_MIN || atol(av) > INT_MAX)
-		return (0);
-	return (1);
-}
-
 int	is_valid_input(char **av)
 {
 	int	i;
@@ -81,8 +72,6 @@ int	is_valid_input(char **av)
 	while (av[i])
 	{
 		if (!number_check(av[i]))
-			return (0);
-		if (is_valid_int(av[i])!= 1)
 			return (0);
 		zeros = check_zero(av[i]);
 		i++;
