@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adugain <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: adugain <adugain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:08:08 by adugain           #+#    #+#             */
-/*   Updated: 2023/04/07 15:21:16 by adugain          ###   ########.fr       */
+/*   Updated: 2023/05/03 13:51:36 by adugain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,38 @@ int	check_pile(t_pile *pile)
 	return (1);
 }
 
-int	abs(int nb)
-{
-	if (nb < 0)
-		nb *= -1;
-	return (nb);
-}
-
 int	error(void)
 {
 	write(2, "Error\n", 6);
 	return (0);
+}
+
+int	is_sign(char c)
+{
+	return (c == '+' || c == '-');
+}
+
+int	strnb_comp(char *s1, char *s2)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = i;
+	if (s1[i] == '+')
+	{
+		if (s2[j] != '+')
+			j++;
+	}
+	else
+	{
+		if (s2[i] == '+')
+			j++;
+	}
+	while (s1[i] && s2[j] && s1[i] == s2[j])
+	{
+		i++;
+		j++;
+	}
+	return (s1[i] - s2[j]);
 }

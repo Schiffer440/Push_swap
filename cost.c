@@ -6,7 +6,7 @@
 /*   By: adugain <adugain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:14:40 by adugain           #+#    #+#             */
-/*   Updated: 2023/03/28 07:48:09 by adugain          ###   ########.fr       */
+/*   Updated: 2023/05/03 12:02:18 by adugain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ void	cheapest_move(t_pile **pile_a, t_pile **pile_b)
 	tmp = *pile_b;
 	while (tmp)
 	{
-		if (abs(tmp->cost_a) + abs(tmp->cost_b) < cheapest)
+		if (ft_abs(tmp->cost_a) + ft_abs(tmp->cost_b) < cheapest)
 		{
-			cheapest = abs(tmp->cost_a) + abs(tmp->cost_b);
+			cheapest = ft_abs(tmp->cost_a) + ft_abs(tmp->cost_b);
 			cost_a = tmp->cost_a;
 			cost_b = tmp->cost_b;
 		}

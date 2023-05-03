@@ -6,7 +6,7 @@
 /*   By: adugain <adugain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:28:55 by adugain           #+#    #+#             */
-/*   Updated: 2023/03/28 15:21:59 by adugain          ###   ########.fr       */
+/*   Updated: 2023/05/03 13:51:21 by adugain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1
+#  define BUFFER_SIZE 1
 # endif
 # include <stdlib.h>
 # include <unistd.h>
@@ -53,7 +53,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
-int	wordcount(char *s, char c);
+int		wordcount(char *s, char c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -62,7 +62,7 @@ char	*get_next_line(int fd);
 char	*ft_strjoin_gnl(char *s1, char *s2);
 size_t	ft_strlen_gnl(const char *s);
 char	*ft_strchr_gnl(char *s, int c);
-long int	ft_atol(const char *str);
+long	int	ft_atol(const char *str);
 typedef struct s_list
 {
 	void			*content;
@@ -77,7 +77,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-int	format(char c, va_list args);
-int	ft_printf(const char *str, ...);
+int		format(char c, va_list args);
+int		ft_printf(const char *str, ...);
+int		ft_abs(int nb);
 
 #endif

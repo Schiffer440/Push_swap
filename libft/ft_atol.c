@@ -6,7 +6,7 @@
 /*   By: adugain <adugain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 15:21:00 by adugain           #+#    #+#             */
-/*   Updated: 2023/03/28 15:21:24 by adugain          ###   ########.fr       */
+/*   Updated: 2023/05/03 13:45:40 by adugain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 long int	ft_atol(const char *str)
 {
-	int	i;
+	int			i;
 	long int	nb;
-	int	sign;
+	int			sign;
 
 	sign = 1;
 	i = 0;

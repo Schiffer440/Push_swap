@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adugain <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: adugain <adugain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 09:41:48 by adugain           #+#    #+#             */
-/*   Updated: 2023/04/07 15:48:48 by adugain          ###   ########.fr       */
+/*   Updated: 2023/03/28 15:26:56 by adugain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ typedef struct s_pile
 }	t_pile;
 
 int		main(int ac, char **av);
+int		ft_printf(const char *str, ...);
+int		format(char c, va_list args);
 int		is_valid_input(char **av);
 int		is_digit(char c);
 int		is_sign(char c);
