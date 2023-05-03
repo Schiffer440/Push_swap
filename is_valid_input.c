@@ -6,7 +6,7 @@
 /*   By: adugain <adugain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 09:54:39 by adugain           #+#    #+#             */
-/*   Updated: 2023/05/03 13:52:00 by adugain          ###   ########.fr       */
+/*   Updated: 2023/05/03 15:15:28 by adugain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	duplicate_check(char **av)
 		j = 0;
 		while (av[j])
 		{
-			if (j != i && strnb_comp(av[i], av[j]) == 0)
+			if (j != i && ft_atol(av[i]) == ft_atol(av[j]))
 				return (1);
 			j++;
 		}
