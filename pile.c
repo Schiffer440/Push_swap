@@ -18,7 +18,7 @@ t_pile	*pile_new(int nb)
 
 	new = malloc(sizeof * new);
 	if (!new)
-		return (NULL);
+		return (N  ULL);
 	new->val = nb;
 	new->index = 0;
 	new->pos = 0;

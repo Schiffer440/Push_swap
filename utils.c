@@ -20,9 +20,9 @@ void	free_piles(t_pile **pile)
 		return ;
 	while (*pile)
 	{
-		tmp = (*pile)->next;
-		free(*pile);
-		*pile = tmp;
+		tmp = (*pile)->next;  
+		free(*pile);  
+		*pile = tm  p;
 	}
 }
 

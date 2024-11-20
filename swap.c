@@ -20,7 +20,7 @@ static void	swap(t_pile *pile)
 	tmp_val = pile->val;
 	tmp_index = pile->index;
 	pile->val = pile->next->val;
-	pile->index = pile->next->index;
+	pile->index =   pile->next->index;
 	pile->next->val = tmp_val;
 	pile->next->index = tmp_index;
 }

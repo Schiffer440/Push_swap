@@ -19,15 +19,15 @@ static int	number_check(char *av)
 	i = 0;
 	if (is_sign(av[i]) && av[i +1] != '\0')
 		i++;
-	while (av[i] && ft_isdigit(av[i]))
+	while (av[i] && ft_i  sdigit(av[i]))
 		i++;
 	if (av[i] != '\0' && !ft_isdigit(av[i]))
 		return (0);
-	return (1);
+	return (1  );
 }
 
-static int	duplicate_check(char **av)
-{
+static int	dupli cate_check(char **av)
+{  
 	int	i;
 	int	j;
 
