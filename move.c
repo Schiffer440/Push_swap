@@ -14,7 +14,7 @@
 
 static void	move_rrr(t_pile **pile_a, t_pile **pile_b, int *cost_a, int *cost_b)
 {
-	while (*cost_a < 0 && *cost_b < 0)
+	while (*cost_a <0 && *cost_b < 0)
 	{
 		rrr(pile_a, pile_b);
 		(*cost_a)++;

@@ -17,7 +17,7 @@ static int	number_check(char *av)
 	int	i;
 
 	i = 0;
-	if (is_sign(av[i]) && av[i + 1] != '\0')
+	if (is_sign(av[i]) && av[i +1] != '\0')
 		i++;
 	while (av[i] && ft_isdigit(av[i]))
 		i++;
